@@ -8,29 +8,64 @@
     <title>Pig Game</title>
   </head>
   <body>
-    <main>
-      <section class="player player--0 player--active">
-        <h2 class="name" id="name--0">Player 1</h2>
-        <p class="score" id="score--0">43</p>
-        <div class="current">
-          <p class="current-label">Current</p>
-          <p class="current-score" id="current--0">0</p>
-        </div>
-      </section>
-      <section class="player player--1">
-        <h2 class="name" id="name--1">Player 2</h2>
-        <p class="score" id="score--1">24</p>
-        <div class="current">
-          <p class="current-label">Current</p>
-          <p class="current-score" id="current--1">0</p>
-        </div>
-      </section>
+    <div style="display: flex; flex-direction: column">
+      <button class="show-modal">GAME RULES 🧾</button>
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <h1>When a dice is rolled... 🎲</h1>
+        <p>
+          You will be presented with a random dice roll. The value that is shows
+          up is added to your current score. You can keep rolling the dice and
+          the scores just keep adding. But that only happens if you roll numbers
+          above '1'. Once you roll a 1, your current score goes right back to 0.
+        </p>
+        <br />
+        <h1>How to not lose scores? 👀</h1>
+        <p>
+          This is where the HOLD option comes in. If you wish to not take the
+          risk of rolling a '1' and losing all your current score, you can use
+          the HOLD option to save your current score and pass the turn to the
+          other player. Although the other player also has the option to do the
+          same. Everytime the score that you reach before using HOLD is added to
+          a TOTAL SCORE on your screen.
+        </p>
+        <br />
+        <h1>How do you win? 🏆</h1>
+        <p>
+          Your TOTAL SCORE is what is accumulated everytime you used the HOLD
+          option, or everytime you lost the score because of rolling 1.
+          Whichever player reaches TOTAL SCORE more than 100 first, is the
+          winner of the game.
+        </p>
+        <br />
+        <br />
+        <p>Enjoy the game! 👍</p>
+      </div>
+      <div class="overlay hidden"></div>
+      <main>
+        <section class="player player--0 player--active">
+          <h2 class="name" id="name--0">Player 1</h2>
+          <p class="score" id="score--0">43</p>
+          <div class="current">
+            <p class="current-label">Current</p>
+            <p class="current-score" id="current--0">0</p>
+          </div>
+        </section>
+        <section class="player player--1">
+          <h2 class="name" id="name--1">Player 2</h2>
+          <p class="score" id="score--1">24</p>
+          <div class="current">
+            <p class="current-label">Current</p>
+            <p class="current-score" id="current--1">0</p>
+          </div>
+        </section>
 
-      <img src="dice-5.png" alt="Playing dice" class="dice" />
-      <button class="btn btn--new">🔄 New game</button>
-      <button class="btn btn--roll">🎲 Roll dice</button>
-      <button class="btn btn--hold">📥 Hold</button>
-    </main>
+        <img src="dice-5.png" alt="Playing dice" class="dice" />
+        <button class="btn btn--new">🔄 New game</button>
+        <button class="btn btn--roll">🎲 Roll dice</button>
+        <button class="btn btn--hold">📥 Hold</button>
+      </main>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
